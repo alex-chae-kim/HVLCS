@@ -47,3 +47,26 @@ the format specified in the assignment.
 # Question 2: Recurrence Equation
 ![Alt Text](images/recurrence.jpg)
 
+# Question 3: Big-Oh
+```
+HVLCS(A, B, val):
+    n = length(A)
+    m = length(B)
+
+    // Initialize base cases
+    for i = 0 to n:
+        dp[i][0] = 0
+    for j = 0 to m:
+        dp[0][j] = 0
+
+    // Fill table
+    for i = 1 to n:
+        for j = 1 to m:
+            if A[i-1] == B[j-1]:
+                dp[i][j] = max(dp[i-1][j-1] + v(A[i-1]), dp[i-1][j], dp[i][j-1])
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+
+    return dp[n][m]
+
+Runtime: O(m * n)
