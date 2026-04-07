@@ -1,5 +1,8 @@
 #include <unordered_map>
 #include <iostream>
+#include <vector>
+#include <string>
+#include <chrono>
 using namespace std;
 
 int main() {
@@ -16,6 +19,8 @@ int main() {
 
     string A, B;
     cin >> A >> B;
+
+    auto start = chrono::high_resolution_clock::now();
 
     int n = A.size(), m = B.size();
 
@@ -54,8 +59,12 @@ int main() {
         }
     }
 
+    auto end = chrono::high_resolution_clock::now();
+    chrono::duration<double, milli> elapsed = end - start;
+
     cout << dp[n][m] << "\n";
-    cout << result;
+    cout << result << "\n";
+    //cout << "Time: " << elapsed.count() << " ms\n";
 
     return 0;
 }
