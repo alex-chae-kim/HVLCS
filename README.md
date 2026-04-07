@@ -1,3 +1,4 @@
+
 # Name
 Alexander Kim (UFID: 71075724)
 
@@ -42,3 +43,7 @@ the format specified in the assignment.
 
 # Question 1: Empirical Comparison
 ![Alt Text](images/runtime.png)
+
+# Question 2: Recurrence Equation
+![Alt Text](images/recurrence.jpg)
+
