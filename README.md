@@ -39,3 +39,6 @@ The project requires the following tools:
 
 The HVLCS.cpp program also expects the text in the input files to exactly match 
 the format specified in the assignment.
+
+# Question 1: Empirical Comparison
+![Alt Text](images/runtime.png)
